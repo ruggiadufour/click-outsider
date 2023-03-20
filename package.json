@@ -17,7 +17,7 @@
     "prettier": "latest",
     "turbo": "latest"
   },
-  "engines": {
+    "engines": {
     "node": ">=14.0.0"
   },
   "dependencies": {},

@@ -1,9 +1,11 @@
+import typescriptPlugin from '@rollup/plugin-typescript'
 // rollup.config.js
 export default {
-	input: 'main.js',
+	input: 'src/index.ts',
 	output: {
-		file: 'index.js',
-		format: 'umd',
+		file: 'bundle.js',
+		format: 'iife',
         name:'clickOutsider'
-	}
+	},
+	plugins: [typescriptPlugin()]
 };

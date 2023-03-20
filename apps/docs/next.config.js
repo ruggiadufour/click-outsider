@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ["ui", "click-outsider"],
+  transpilePackages: ["click-outsider-react",],
 };
