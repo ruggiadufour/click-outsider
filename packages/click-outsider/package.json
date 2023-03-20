@@ -1,0 +1,17 @@
+{
+  "name": "click-outsider",
+  "version": "1.0.0",
+  "description": "Click outside library",
+  "main": "./index.js",
+  "types": "./index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "author": "Angel Ruggia Dufour",
+  "license": "ISC",
+  "dependencies": {
+    "rollup": "^3.20.0"
+  }
+}
