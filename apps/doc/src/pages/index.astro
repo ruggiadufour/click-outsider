@@ -1,11 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.jsx";
+import CardVue from "../components/CardVue.vue";
+import CardSvelte from "../components/CardSvelte.svelte";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <Card client:load />
+    <CardVue client:load />
+    <CardSvelte client:load />
   </main>
 </Layout>
 

@@ -3,37 +3,33 @@ export interface elementActionType {
   callback?: () => unknown;
 }
 
-class clickOutside {
-  static elementActions: elementActionType[] = [];
-
-  static {
-    const isBrowser = typeof window !== "undefined";
-    console.log(isBrowser);
-    isBrowser && this.init();
-  }
-
-  static init() {
+let elementActions: elementActionType[] = [];
+const clickOutside = {
+  init() {
     document.addEventListener("click", (event: MouseEvent) => {
-      clickOutside.elementActions.forEach((elementAction) => {
+      elementActions.forEach((elementAction) => {
         if (!elementAction.element.contains(event.target as Node)) {
           elementAction.callback?.();
         }
       });
     });
-  }
+  },
 
-  static add(
+  add(
     element: elementActionType["element"],
     callback?: elementActionType["callback"]
   ) {
-    clickOutside.elementActions.push({ element, callback });
-  }
+    elementActions.push({ element, callback });
+  },
 
-  static remove(element: elementActionType["element"]) {
-    clickOutside.elementActions = clickOutside.elementActions.filter(
+  remove(element: elementActionType["element"]) {
+    elementActions = elementActions.filter(
       (elementAction) => elementAction.element !== element
     );
-  }
-}
+  },
+};
+
+const isBrowser = typeof window !== "undefined";
+isBrowser && clickOutside.init();
 
 export default clickOutside;

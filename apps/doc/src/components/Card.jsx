@@ -2,14 +2,13 @@ import { ClickOutsiderWrapper } from "click-outsider-react";
 
 export default function Card() {
   return (
-    <div onClick={() => console.log("Click div")}>
-      dale capo
+    <div>
       <ClickOutsiderWrapper
-        onClick={() => console.log("Click ClickOutsiderWrapper")}
-        onClickOutside={() => console.log("Outside brah")}
+        onClickOutside={() => console.log("Outside React")}
         style={{ backgroundColor: "red" }}
+        className="la re puta de tu vieja"
       >
-        <p>Hola mundo</p>
+        <p>Hola mundo React</p>
       </ClickOutsiderWrapper>
     </div>
   );

@@ -1,12 +1,12 @@
 {
-  "name": "click-outsider-vue",
+  "name": "click-outsider-svelte",
   "version": "0.0.1",
   "browser": {
-    "./sfc": "./ClickOutsiderWrapper.vue"
+    "./sfc": "./ClickOutsiderWrapper.svelte"
   },
-  "main": "./ClickOutsiderWrapper.vue",
-  "module": "./ClickOutsiderWrapper.vue",
-  "types": "./ClickOutsiderWrapper.vue",
+  "main": "./ClickOutsiderWrapper.svelte",
+  "module": "./ClickOutsiderWrapper.svelte",
+  "types": "./ClickOutsiderWrapper.svelte",
   "license": "MIT",
   "scripts": {
     "lint": "eslint \"**/*.ts*\""
@@ -16,10 +16,8 @@
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
     "tsconfig": "*",
-    "typescript": "^4.5.2",
-    "vue": "^3.2.47"
+    "typescript": "^4.5.2"
   },
   "dependencies": {
-    "vue": "^3.2.30"
   }
 }
